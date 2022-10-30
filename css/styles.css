@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Cormorant+Garamond' !important;
+}
+
+:root {
+  --menu-color: white;
+  --main-section-color: purple;
+  --main-text-color: white;
+  --violet: blueviolet;
+}
+
+header .nav-link {
+  color: var(--menu-color) !important;
+}
+
+section {
+  background-color: var(--main-section-color);
+  height: 100vh;
+  padding: 0;
+}
+
+.call-to-action {
+  position: absolute;
+  color: var(--main-text-color);
+  font-weight: 700;
+  font-style: bold;
+  z-index: 9999;
+  text-shadow: 8px 9px 14px #000000;
+}
+
+.call-to-action button {
+  font-weight: 700;
+}
+
+.call-to-action .btn-action:hover {
+  color: var(--main-section-color);
+  background-color: var(--main-text-color);
+}
+
+.btn-action {
+  color: var(--main-text-color);
+  background-color: var(--main-section-color);
+  box-shadow: 10px 10px 10px black;
+}
+
+.main-background-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.main-background-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-background-image {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-image: url('../images/main-background-image.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hide {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.preloader {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--violet);
+  color: white;
+  position: fixed;
+  z-index: 99999;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 2s, opacity 2s linear;
+}
+
+/** loader **/
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 100px;
+    left: 100px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  4.9% {
+    top: 100px;
+    left: 100px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  5% {
+    top: 100px;
+    left: 100px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+
+@media(max-width:740px) {
+  .main-background-video {
+    display: none;
+  }
+
+  .main-background-image {
+    display: block;
+  }
+}
