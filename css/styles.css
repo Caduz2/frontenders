@@ -172,6 +172,8 @@ section {
   }
 }
 
+/*fim estilos loader*/
+
 @media(max-width:740px) {
   .main-background-video {
     display: none;
@@ -183,15 +185,22 @@ section {
 }
 
 /*detalhes*/
+.detalhes {
+  scroll-snap-type: y mandatory;
+}
 
 .detalhes h1 {
   color: var(--headers);
 }
 
 .think-image {
-  width: 400px;
-  border-radius: 600px;
-  border: 2px solid var(--main-section-color);
+  padding-left: 0;
+  width: 50%;
+  height: 100vh;
+}
+
+.need-container {
+  z-index: 999;
 }
 
 .need ul {
