@@ -25,9 +25,9 @@ var options = {
 
 function init() {
   let observer = new IntersectionObserver(startListAnimation, options);
-  let detalhes = document.getElementById('detalhes');
+  let need = document.getElementById('need-section');
 
-  observer.observe(detalhes);
+  observer.observe(need);
 }
 
 init();

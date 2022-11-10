@@ -38,6 +38,8 @@ section {
   width: 100%;
   min-height: 100vh;
   padding: 0;
+  background-color: var(--main-section-color);
+  color: var(--white-menu);
 }
 
 .main-title {
@@ -185,11 +187,12 @@ section {
 }
 
 /*detalhes*/
-.detalhes {
+.need-section {
   scroll-snap-type: y mandatory;
+  background-color: white !important;
 }
 
-.detalhes h1 {
+.need-section h1 {
   color: var(--headers);
 }
 
@@ -217,6 +220,11 @@ section {
 .show {
   visibility: visible !important;
   opacity: 1 !important;
+}
+
+/*The prooduct*/
+.the-product {
+  min-height: auto;
 }
 
 /*footer*/
