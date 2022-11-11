@@ -1,149 +1,31 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/styles.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&display=swap');
-  </style>
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"
-    defer></script>
-  <script src='./js/index.js' defer></script>
-  <title>FrontEnders</title>
-</head>
-
-<body onload="showPage();">
-  <div id="loader" class="preloader d-flex justify-content-center align-items-center">
-    <div class="lds-ripple">
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <header>
-    <nav class="navbar navbar-expand-lg sticky-top">
-      <div class="container-fluid">
-        <a href="#" class="p-1 navbar-brand d-flex align-items-center">
-          <div class="m-2 image-logo"></div>
-          FrontBots
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-capitalize">
-            <li class="nav-item p-2">
-              <a href="#" class="nav-link">Detalhes</a>
-            </li>
-            <li class="nav-item p-2">
-              <a href="#" class="nav-link">Planos</a>
-            </li>
-            <li class="nav-item p-2">
-              <a href="#" class="nav-link">Cadastre-se</a>
-            </li>
-            <li class="nav-item p-2">
-              <a href="#" class="nav-link">Login</a>
-            </li>
-          </ul>
-        </div>
-    </nav>
-    </div>
-  </header>
-  <main>
-    <section class="d-flex align-items-center justify-content-center text-center container-fluid">
-      <div class="call-to-action">
-        <h1 class="main-title">FrontBots</h1>
-        <h2>Analise de sistemas usando IA e Machine Learning</h2>
-        <button type="button" class="btn btn-action">Peça ajuda!</button>
-      </div>
-      <div class="main-background-video">
-        <video muted loop autoplay>
-          <source src="./images/video-initial-page.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="main-background-image"></div>
-      <div></div>
-    </section>
-
-    <section id="need-section" class="need-section container-fluid d-flex justify-content-center">
-      <div class="row">
-        <img class=" col-6 think-image" src="./images/question.jpg" alt="">
-        <div class=" col-6 need-container d-flex mt-5 align-items-center ">
-          <article class="need">
-            <h1 class="text-center">O que o seu website precisa pra ser um sucesso?</h1>
-            <ul class="list-unstyled text-center">
-              <li class="list-item">Bom Design</li>
-              <li class="list-item">Boa Funcionalidade</li>
-              <li class="list-item">Facilidade de uso</li>
-              <li class="list-item">Otimização para buscas</li>
-              <li class="list-item">Em qualquer aparelho.</li>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="the-product" class="the-product container-fluid text-center flex-column d-flex align-items-center p-5">
-      <h1 class="m-5">Usamos IA e Machine Learning</h1>
-      <h3>... para a criação de bots capazes de avaliar o seu site do design ao codigo fonte.</h3>
-    </section>
-
-  </main>
-  <footer class="footer-page p-1 justify-content-center">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link ref="icon" href="">
+    <link href="css/recuperarbootstrap.css" rel="stylesheet">
+    <link href="css/recuperar.css" rel="stylesheet">
+    </head>
+    <body>
     <div class="container">
-      <div class="row">
-        <div class="message col-12 col-sm-3 p-4">
-          <div class="logo-area d-flex align-items-center">
-            <div class="m-3 image-logo"></div>
-            FrontBots
-          </div>
-          <p>Feedback rapido, simples e <span class="text-uppercase">Confiável</span></p>
-        </div>
-
-        <div class="col-12 col-sm-3 p-4">
-          <h3 class="">Explorar</h3>
-          <nav class="nav flex-column">
-            <a class="nav-link" href=" #">Página inicial</a>
-            <a class="nav-link" href="#">Detalhes</a>
-            <a class="nav-link" href="#">Planos</a>
-          </nav>
-        </div>
-
-        <div class="col-12 col-sm-3 p-4">
-          <h3 class="">Follow</h3>
-          <nav class="nav flex-column">
-            <a class="nav-link" href=" #">Instagram</a>
-            <a class="nav-link" href="#">Facebook</a>
-            <a class="nav-link" href="#">Linkedin</a>
-          </nav>
-        </div>
-
-
-        <div class="col-12 col-sm-3 p-4">
-          <h3 class="">Contato</h3>
-          <nav class="nav flex-column">
-            <a class="nav-link" href=" #">Formulario</a>
-          </nav>
-        </div>
-
-      </div>
-      <div class="row justify-content-center m-2 text-center">
-        <p>Assine nossa newsletter</p>
-        <form class="d-flex col-12 col-sm-4">
-          <input class="form-control" placeholder="Email">
-          <button class="btn btn-secondary">Assinar</button>
-        </form>
-      </div>
+    <form class="form-signin" method="POST" action="" style="background:#DCDCDC;">
+    <h2 class="form-signin-heading text-center">Recuperação de Senha</h2>
+    <div style="padding-bottom: 20px;">
+    <label class="sr-only">Usuário:</label>
+    <input class="form-control" name="email" placeholder="Digite seu email" type="text">
     </div>
-    <div class="text-center border-top">
-      <p class="mt-4">Copyright, 2022, Grupo 6- Programadores Cariocas</p>
+    <input class="btn btn-lg btn-verde btn-block" value="Recuperar" name="SendRecupSenha" type="submit">
+    <div class="text-center" style="margin-top:20px;">
+    Lembrou?
+    <a href="login.php">Clique aqui</a>
     </div>
-  </footer>
-</body>
-
-</html>
+    </form>
+    </div>
+    </body>
+    </html>
+    
+    
