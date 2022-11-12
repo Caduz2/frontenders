@@ -17,6 +17,10 @@
   --transparent-background-color: rgba(128, 0, 128, 0.8);
 }
 
+.fas {
+  font-family: "Font Awesome 6 Free" !important;
+}
+
 header {
   z-index: 4;
 }
@@ -71,10 +75,23 @@ section {
   background-color: var(--main-text-color);
 }
 
+
+.btn {
+  margin: 5px;
+}
+
 .btn-action {
   color: var(--main-text-color);
   background-color: var(--main-section-color);
-  box-shadow: 10px 10px 10px black;
+  box-shadow: 10px 10px 35px black;
+  border-radius: 0%;
+}
+
+.btn-saibamais {
+  color: var(--main-section-color);
+  background-color: var(--white-menu);
+  box-shadow: 10px 10px 35px black;
+  border-radius: 0%;
 }
 
 .main-background-video {
@@ -197,9 +214,12 @@ section {
 }
 
 .think-image {
-  padding-left: 0;
-  width: 50%;
-  height: 100vh;
+  padding: 0 !important;
+}
+
+.think-image img {
+  width: 100%;
+  height: 100%;
 }
 
 .need-container {
@@ -225,6 +245,25 @@ section {
 /*The prooduct*/
 .the-product {
   min-height: auto;
+  background-color: var(--main-section-color);
+  width: 100%;
+}
+
+/*design*/
+.design {
+  min-height: auto;
+  background-color: var(--white-menu);
+  color: var(--main-section-color);
+}
+
+.design .card {
+  min-height: 200px;
+  font-size: 25px;
+
+}
+
+.image-card {
+  width: 200px;
 }
 
 /*footer*/
@@ -239,4 +278,11 @@ section {
 
 .footer-page .nav-link:hover {
   color: var(--main-text-color)
+}
+
+.icon {
+  margin-top: 20px;
+  padding: 10px;
+  display: inline-block;
+  font-size: 30px;
 }
