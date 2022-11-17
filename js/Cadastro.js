@@ -11,19 +11,14 @@ let textPassword = document.getElementById("textPassword");
 
 //Condições de cadastro
 form.addEventListener("submit", (e) => {
-  if (email.value == "" && password.value == "" && cep.value == "" && 
-  nome.value == "") {
+  if (email.value == "" && password.value == "" && cep.value == "" && nome.value == "") {
     textForm.textContent = "Você precisa preencher todos os campos!";
   } else if (
     validatorEmail(email.value) === true &&
     validatorPassword(password.value) === true &&
     validatorCep(cep.value) === true
   ) {
-    alert('Cadastro efetuado com sucesso.')
-    console.log(email.value);
-    console.log(password.value);
-    console.log(nome.value);
-    console.log(cep.value);
+    alert('Cadastro efetuado com sucesso.');
     textForm.textContent = "";
     textEmail.textContent = "";
     textPassword.textContent = "";
@@ -33,7 +28,7 @@ form.addEventListener("submit", (e) => {
 
   e.preventDefault();
 });
-//Verifica o formato do email a cada tecla digitada 
+  //Verifica o formato do email a cada tecla digitada 
 email.addEventListener("keyup", () => {
   if (validatorEmail(email.value) !== true) {
     textEmail.textContent = "Formato inválido.";
@@ -87,7 +82,6 @@ const cepValido = (cep) => cep.length == 8 && eNumero(cep);
 
 const pesquisarCep = async() => {
   limparFormulario();
-  
   const cep = document.getElementById('cep').value;
   const url = `https://viacep.com.br/ws/${cep}/json/`;
   if (cepValido(cep)){
@@ -102,4 +96,5 @@ const pesquisarCep = async() => {
       document.getElementById('endereco').value = 'CEP incorreto!';
   }
 }
+
 cep.addEventListener('focusout',pesquisarCep);

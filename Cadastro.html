@@ -1,148 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/Cadastro.css">
+  <link rel="stylesheet" href="./css/Cadastro.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg sticky-top">
-          <div class="container-fluid">
-            <a href="#" class="p-1 navbar-brand d-flex align-items-center">
-              <div class="m-2 image-logo"></div>
-              FrontBots
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-capitalize">
-                <li class="nav-item p-2">
-                  <a href="#" class="nav-link">Detalhes</a>
-                </li>
-                <li class="nav-item p-2">
-                  <a href="#" class="nav-link">Planos</a>
-                </li>
-                <li class="nav-item p-2">
-                  <a href="#" class="nav-link">Cadastre-se</a>
-                </li>
-                <li class="nav-item p-2">
-                  <a href="#" class="nav-link">Login</a>
-                </li>
-              </ul>
-            </div>
-        </nav>
-        </div>
-      </header>
-
-
-<div id="campos">
-  <form altocomplete="off" id="alignField">
-<div class="inputbox">
-    <label for="email">Email</label>   
-    <input type="text" id="email" required>
-    <small id="textEmail"></small>
-  </div>
-
-<div class="inputbox">
-   <label for="senha">Senha</label>
-   <input type="text" id="password" required>
-   <small id="textPassword"></small>
-  </div>
-
-<div class="inputbox">
-  <label for="nome">Nome</label>
-  <input type="text" id="name" required>
-</div>  
-
-<div class="inputbox">
-  <label for="cep">CEP</label>
-  <input type="text" id="cep"required>
-  <small id="textCep"></small>
-  </div> 
-
-  <div class="inputbox">
-    <label for="endereco">Endereço</label>
-    <input type="text" id="endereco"  required>
-</div>
-<div class="inputbox">
-    <input type="text" id="numero"  required>
-    <label for="numero">Número</label>
-</div>
-
-<div class="inputbox">
-    <input type="text" id="bairro"  required>
-    <label for="bairro">Bairro</label>
-</div>
-<div class="inputbox">
-    <input type="text" id="cidade"  required>
-    <label for="cidade">Cidade</label>
-</div>
-<div class="inputbox">
-    <input type="text" id="estado"  required>
-    <label for="estado">Estado</label>
-</div>  
-
-     <button class="button">Cadastro</button>
-  </form>
-
- </div>
-<footer class="footer-page p-1 justify-content-center">
-  <div class="container">
-    <div class="row">
-      <div class="message col-12 col-sm-3 p-4">
-        <div class="logo-area d-flex align-items-center">
-          <div class="m-3 image-logo"></div>
+  <header>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <a href="./index.html" class="p-1 navbar-brand d-flex align-items-center">
+          <div class="m-2 image-logo"></div>
           FrontBots
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-capitalize">
+            <li class="nav-item p-2">
+              <a href="#" class="nav-link">Detalhes</a>
+            </li>
+            <li class="nav-item p-2">
+              <a href="#" class="nav-link">Planos</a>
+            </li>
+            <li class="nav-item p-2">
+              <a href="#" class="nav-link">Cadastre-se</a>
+            </li>
+            <li class="nav-item p-2">
+              <a href="#" class="nav-link">Login</a>
+            </li>
+          </ul>
         </div>
-        <p>Feedback rapido, simples e <span class="text-uppercase">Confiável</span></p>
-      </div>
-
-      <div class="col-12 col-sm-3 p-4">
-        <h3 class="">Explorar</h3>
-        <nav class="nav flex-column">
-          <a class="nav-link" href=" #">Página inicial</a>
-          <a class="nav-link" href="#">Detalhes</a>
-          <a class="nav-link" href="#">Planos</a>
-        </nav>
-      </div>
-
-      <div class="col-12 col-sm-3 p-4">
-        <h3 class="">Follow</h3>
-        <nav class="nav flex-column">
-          <a class="nav-link" href=" #">Instagram</a>
-          <a class="nav-link" href="#">Facebook</a>
-          <a class="nav-link" href="#">Linkedin</a>
-        </nav>
-      </div>
-
-
-      <div class="col-12 col-sm-3 p-4">
-        <h3 class="">Contato</h3>
-        <nav class="nav flex-column">
-          <a class="nav-link" href=" #">Formulario</a>
-        </nav>
-      </div>
-
+    </nav>
     </div>
-    <div class="row justify-content-center m-2 text-center">
-      <p>Assine nossa newsletter</p>
-      <form class="d-flex col-12 col-sm-4">
-        <input class="form-control" placeholder="Email">
-        <button class="btn btn-secondary">Assinar</button>
-      </form>
+  </header>
+
+
+  <div id="campos">
+    <form altocomplete="off" id="alignField">
+      <div class="inputbox">
+        <label for="email">Email</label>
+        <input type="text" id="email" required>
+        <small id="textEmail"></small>
+      </div>
+
+      <div class="inputbox">
+        <label for="senha">Senha</label>
+        <input type="text" id="password" required>
+        <small id="textPassword"></small>
+      </div>
+
+      <div class="inputbox">
+        <label for="nome">Nome</label>
+        <input type="text" id="name" required>
+      </div>
+
+      <div class="inputbox">
+        <label for="cep">CEP</label>
+        <input type="text" id="cep" required>
+        <small id="textCep"></small>
+      </div>
+
+      <div class="inputbox">
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" required>
+      </div>
+      <div class="inputbox">
+        <input type="text" id="numero" required>
+        <label for="numero">Número</label>
+      </div>
+
+      <div class="inputbox">
+        <input type="text" id="bairro" required>
+        <label for="bairro">Bairro</label>
+      </div>
+      <div class="inputbox">
+        <input type="text" id="cidade" required>
+        <label for="cidade">Cidade</label>
+      </div>
+      <div class="inputbox">
+        <input type="text" id="estado" required>
+        <label for="estado">Estado</label>
+      </div>
+
+      <button class="button">Cadastro</button>
+    </form>
+
+  </div>
+  <footer class="footer-page p-1 justify-content-center">
+    <div class="container">
+      <div class="row">
+        <div class="message col-12 col-sm-3 p-4">
+          <div class="logo-area d-flex align-items-center">
+            <div class="m-3 image-logo"></div>
+            FrontBots
+          </div>
+          <p>Feedback rapido, simples e <span class="text-uppercase">Confiável</span></p>
+        </div>
+
+        <div class="col-12 col-sm-3 p-4">
+          <h3 class="">Explorar</h3>
+          <nav class="nav flex-column">
+            <a class="nav-link" href=" #">Página inicial</a>
+            <a class="nav-link" href="#">Detalhes</a>
+            <a class="nav-link" href="#">Planos</a>
+          </nav>
+        </div>
+
+        <div class="col-12 col-sm-3 p-4">
+          <h3 class="">Follow</h3>
+          <nav class="nav flex-column">
+            <a class="nav-link" href=" #">Instagram</a>
+            <a class="nav-link" href="#">Facebook</a>
+            <a class="nav-link" href="#">Linkedin</a>
+          </nav>
+        </div>
+
+
+        <div class="col-12 col-sm-3 p-4">
+          <h3 class="">Contato</h3>
+          <nav class="nav flex-column">
+            <a class="nav-link" href=" #">Formulario</a>
+          </nav>
+        </div>
+
+      </div>
+      <div class="row justify-content-center m-2 text-center">
+        <p>Assine nossa newsletter</p>
+        <form class="d-flex col-12 col-sm-4">
+          <input class="form-control" placeholder="Email">
+          <button class="btn btn-secondary">Assinar</button>
+        </form>
+      </div>
     </div>
-  </div>
-  <div class="text-center border-top">
-    <p class="mt-4">Copyright, 2022, Grupo 6- Programadores Cariocas</p>
-  </div>
-</footer>
-    <script src="./js/Cadastro.js"></script>
+    <div class="text-center border-top">
+      <p class="mt-4">Copyright, 2022, Grupo 6- Programadores Cariocas</p>
+    </div>
+  </footer>
+  <script src="./js/Cadastro.js"></script>
 </body>
+
 </html>

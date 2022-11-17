@@ -43,13 +43,13 @@
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-capitalize">
             <li class="nav-item p-2">
-              <a href="#" class="nav-link">Detalhes</a>
+              <a href="#detalhes" class="nav-link">Detalhes</a>
             </li>
             <li class="nav-item p-2">
-              <a href="#" class="nav-link">Planos</a>
+              <a href="#planos" class="nav-link">Planos</a>
             </li>
             <li class="nav-item p-2">
-              <a href="#" class="nav-link">Cadastre-se</a>
+              <a href="./Cadastro.html" class="nav-link">Cadastre-se</a>
             </li>
             <li class="nav-item p-2">
               <a href="./login.html" class="nav-link">Login</a>
@@ -64,8 +64,8 @@
       <div class="call-to-action">
         <h1 class="main-title">FrontBots</h1>
         <h2>Analise de sistemas usando IA e Machine Learning</h2>
-        <button type="button" class="btn btn-action">Inscreva-se</button>
-        <button type="button" class="btn btn-saibamais">Saiba mais</button>
+        <a href="./Cadastro.html" class="btn btn-action">Inscreva-se</a>
+        <a href='#detalhes' type="button" class="btn btn-saibamais">Saiba mais</a>
       </div>
       <div class="main-background-video">
         <video muted loop autoplay>
@@ -112,7 +112,7 @@
       <h3>... para a criação de bots capazes de avaliar o seu site do design ao codigo fonte.</h3>
     </section>
 
-    <section
+    <section id="detalhes"
       class="design container-fluid text-center flex-comlumn d-flex align-items-center justify-content-center p-5">
       <div class="container row row-cols-1 row-cols-md-2 justify-content-between">
         <div class="col">
@@ -121,9 +121,7 @@
               <img src="./images/testeAB.png" alt="testes AB" class="card-image-top  image-card mb-5">
               <h1 class="card-title mb-5">Testes A/B Mais rapidos</h2>
                 <p class="card-text text-muted">Somos capazes de simular usando nossos servidores o acesso de milhares
-                  de
-                  pessoas com
-                  diferentes perfis.</p>
+                  de pessoas com diferentes perfis.</p>
             </div>
           </div>
         </div>
@@ -142,6 +140,7 @@
         <div class="col">
           <div class="card m-2 p-3">
             <div class="card-body">
+              <img src="./images/code-icon.svg" alt="Otimização de codigo" class="card-image-top image-card mb-5">
               <h1 class="card-title mb-5">Otimização de codigo para carregar suas paginas Mais rapido.</h4>
                 <p class="card-text text-muted">Analise e Otimização de codigo utilizando as tecnologias mais recentes.
                 </p>
@@ -152,12 +151,90 @@
       </div>
     </section>
 
+    <section id='planos'
+      class="design container-fluid flex-comlumn d-flex align-items-center justify-content-center p-5">
+      <div class="row w-100">
+        <header class="text-center">
+          <h2 class="main-title">Planos</h2>
+          <p>Escolha o plano que melhor atende as suas necessidades.</p>
+        </header>
+
+        <div class='col-12 col-md-6 col-lg-3 plan-card card p-5'>
+          <div class="card-body">
+            <header>
+              <h3 class="card-title">Básico</h3>
+              <p class="price">R$ 500</p>
+            </header>
+            <button class=" btn btn-plan-selection"> Selecionar Plano</button>
+            <div class="card-text">
+              <ul class="list-unstyled list-resources">
+                <li><i class="disponible list-icon fas fa-solid fa-check pe-2"></i>lorem</li>
+                <li class="text-muted"><i class="fas pe-2 list-icon fa-solid fa-xmark"></i>ipsum</li>
+                <li class="text-muted"><i class="fas pe-2 list-icon fa-solid fa-xmark"></i>lorem</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-12 col-md-6 col-lg-3 plan-card card p-5'>
+          <div class=" card-body">
+            <header>
+              <h3 class="card-title">Padrão</h3>
+              <p class="price">R$ 790</p>
+            </header>
+            <button class=" btn btn-plan-selection"> Selecionar Plano</button>
+            <div class="card-text">
+              <ul class="list-unstyled list-resources">
+                <li><i class="disponible list-icon fas fa-solid fa-check pe-2"></i>lorem</li>
+                <li><i class="disponible list-icon fas fa-solid fa-check pe-2"></i>ipsum</li>
+                <li class="text-muted"><i class="fas fa-solid pe-2 list-icon fa-xmark"></i>lorem</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-12 col-md-6 col-lg-3 plan-card recommended card p-5'>
+          <div class="card-body">
+            <header>
+              <h2 class="card-title">Pro</h2>
+              <p class="text-right">Recomendado</p>
+              <p class="price">R$ 850</p>
+            </header>
+            <button class=" btn btn-recommended"> Selecionar Plano</button>
+            <div class="card-text">
+              <ul class="list-unstyled list-resources">
+                <li><i class="disponible list-icon fas fa-solid fa-check pe-2"></i>lorem</li>
+                <li><i class="disponible list-icon fas fa-solid fa-check pe-2"></i>ipsum</li>
+                <li><i class="disponible list-icon fas fa-solid fa-check pe-2"></i>lorem</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-12 col-md-6 col-lg-3 plan-card card p-5'>
+          <div class="card-body">
+            <header>
+              <h3 class="card-title">Premium</h3>
+              <p class="price">R$ 1000</p>
+            </header>
+            <button class=" btn btn-plan-selection"> Selecionar Plano</button>
+            <div class="card-text">
+              <ul class="list-unstyled list-resources">
+                <li><i class="disponible list-icon fas fa-solid fa-check pe-2"></i>lorem</li>
+                <li><i class="disponible list-icon fas fa-solid fa-check pe-2"></i>ipsum</li>
+                <li><i class="disponible list-icon fas fa-solid fa-check pe-2"></i>lorem</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </section>
+
   </main>
   <footer class="footer-page p-1 justify-content-center">
     <div class="container">
       <div class="row">
-        <div class="message col-12 col-sm-3 p-4">
-          <div class="logo-area d-flex align-items-center">
+        <div class="message col-12 col-sm-3 p-4 text-center">
+          <div class="logo-area d-flex align-items-center flex-column mb-2">
             <div class="m-3 image-logo"></div>
             FrontBots
           </div>
@@ -193,7 +270,7 @@
       </div>
       <div class="row justify-content-center m-2 text-center">
         <p>Assine nossa newsletter</p>
-        <form class="d-flex col-12 col-sm-4">
+        <form class="d-flex col-12 col-sm-12 col-md-4">
           <input class="form-control" placeholder="Email">
           <button class="btn btn-secondary">Assinar</button>
         </form>
