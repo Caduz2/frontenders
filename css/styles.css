@@ -21,6 +21,15 @@
   --light-green: #39E100;
 }
 
+a {
+  text-decoration: underline;
+  color: var(--white-text)
+}
+
+a:hover {
+  color: var(--light-green)
+}
+
 .fas {
   font-family: "Font Awesome 6 Free" !important;
 }
@@ -390,17 +399,18 @@ section {
 }
 
 .form-text {
-  color: var(--main-section-color);
+  color: yellow;
 }
 
 .btn-register {
   color: white;
-  background-color: var(--main-section-color);
-  border: none;
+  background-color: transparent;
+  border: 1px solid white;
   box-shadow: 2px 5px 5px black;
 }
 
-.btn-register:hover {
+.btn-register:hover,
+.btn-register:focus {
   color: black;
   background-color: var(--white-text);
 }
@@ -409,8 +419,19 @@ section {
   background-color: var(--shadow) !important;
 }
 
-@media(min-width:820px) {
+.message {
+  color: var(--white-text);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media(min-width:768px) {
   .register-form {
     width: 70%;
+  }
+
+  .message {
+    background-color: var(--white-text);
+    color: black;
   }
 }
