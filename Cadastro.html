@@ -13,139 +13,79 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg sticky-top">
-      <div class="container-fluid">
-        <a href="./index.html" class="p-1 navbar-brand d-flex align-items-center">
-          <div class="m-2 image-logo"></div>
+  <main class="d-flex justify-content-center register-main">
+    <section id="register-form" class="register-form mt-0 mb-3 d-flex justify-content-center flex-column pb-3">
+      <div class="message col-12 p-4 text-center">
+        <div class="logo-area d-flex align-items-center flex-column mb-2">
+          <div class="m-3 image-logo-big"></div>
           FrontBots
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-capitalize">
-            <li class="nav-item p-2">
-              <a href="#" class="nav-link">Detalhes</a>
-            </li>
-            <li class="nav-item p-2">
-              <a href="#" class="nav-link">Planos</a>
-            </li>
-            <li class="nav-item p-2">
-              <a href="#" class="nav-link">Cadastre-se</a>
-            </li>
-            <li class="nav-item p-2">
-              <a href="#" class="nav-link">Login</a>
-            </li>
-          </ul>
         </div>
-    </nav>
-    </div>
-  </header>
-
-
-  <div id="campos">
-    <form altocomplete="off" id="alignField">
-      <div class="inputbox">
-        <label for="email">Email</label>
-        <input type="text" id="email" required>
-        <small id="textEmail"></small>
+        <p>Feedback rapido, simples e <span class="text-uppercase">Confiável</span></p>
       </div>
 
-      <div class="inputbox">
-        <label for="senha">Senha</label>
-        <input type="text" id="password" required>
-        <small id="textPassword"></small>
-      </div>
-
-      <div class="inputbox">
-        <label for="nome">Nome</label>
-        <input type="text" id="name" required>
-      </div>
-
-      <div class="inputbox">
-        <label for="cep">CEP</label>
-        <input type="text" id="cep" required>
-        <small id="textCep"></small>
-      </div>
-
-      <div class="inputbox">
-        <label for="endereco">Endereço</label>
-        <input type="text" id="endereco" required>
-      </div>
-      <div class="inputbox">
-        <input type="text" id="numero" required>
-        <label for="numero">Número</label>
-      </div>
-
-      <div class="inputbox">
-        <input type="text" id="bairro" required>
-        <label for="bairro">Bairro</label>
-      </div>
-      <div class="inputbox">
-        <input type="text" id="cidade" required>
-        <label for="cidade">Cidade</label>
-      </div>
-      <div class="inputbox">
-        <input type="text" id="estado" required>
-        <label for="estado">Estado</label>
-      </div>
-
-      <button class="button">Cadastro</button>
-    </form>
-
-  </div>
-  <footer class="footer-page p-1 justify-content-center">
-    <div class="container">
-      <div class="row">
-        <div class="message col-12 col-sm-3 p-4">
-          <div class="logo-area d-flex align-items-center">
-            <div class="m-3 image-logo"></div>
-            FrontBots
+      <div id="form" class="form d-flex align-self-center">
+        <form altocomplete="off" id="alignField">
+          <div class="row">
+            <label for="email" class='form-label'>Email</label>
+            <input type="text" id="email" class='form-control' required>
+            <small id="textEmail" class="form-text"></small>
           </div>
-          <p>Feedback rapido, simples e <span class="text-uppercase">Confiável</span></p>
-        </div>
 
-        <div class="col-12 col-sm-3 p-4">
-          <h3 class="">Explorar</h3>
-          <nav class="nav flex-column">
-            <a class="nav-link" href=" #">Página inicial</a>
-            <a class="nav-link" href="#">Detalhes</a>
-            <a class="nav-link" href="#">Planos</a>
-          </nav>
-        </div>
+          <div class="row">
+            <label for="senha" class='form-label'>Senha</label>
+            <input type="password" id="password" class='form-control' required>
+            <small id="textPassword" class='form-text'></small>
+          </div>
 
-        <div class="col-12 col-sm-3 p-4">
-          <h3 class="">Follow</h3>
-          <nav class="nav flex-column">
-            <a class="nav-link" href=" #">Instagram</a>
-            <a class="nav-link" href="#">Facebook</a>
-            <a class="nav-link" href="#">Linkedin</a>
-          </nav>
-        </div>
+          <div class="row">
+            <label for="nome" class='form-label'>Nome</label>
+            <input type="text" id="name" class='form-control' required>
+          </div>
+
+          <div class="row">
+            <label for="cep" class='form-label'>CEP</label>
+            <input type="text" id="cep" class='form-control' required>
+            <small id="textCep"></small>
+          </div>
 
 
-        <div class="col-12 col-sm-3 p-4">
-          <h3 class="">Contato</h3>
-          <nav class="nav flex-column">
-            <a class="nav-link" href=" #">Formulario</a>
-          </nav>
-        </div>
+          <div class="row">
+            <label for="endereco" class='form-label'>Endereço</label>
+            <input type="text" id="endereco" class='form-control' disabled required>
+          </div>
 
-      </div>
-      <div class="row justify-content-center m-2 text-center">
-        <p>Assine nossa newsletter</p>
-        <form class="d-flex col-12 col-sm-4">
-          <input class="form-control" placeholder="Email">
-          <button class="btn btn-secondary">Assinar</button>
+          <div class="row">
+            <div class=" col-12 col-md-6">
+              <label for="numero" class='form-label'>Número</label>
+              <input type="text" id="numero" class='form-control' required>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="bairro" class='form-label'>Bairro</label>
+              <input type="text" id="bairro" class='form-control' disabled required>
+            </div>
+          </div>
+
+          <div class='row'>
+            <div class="col-12 col-md-6">
+              <label for="cidade" class='form-label'>Cidade</label>
+              <input type="text" id="cidade" class='form-control' disabled required>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="estado" class='form-label'>Estado</label>
+              <input type="text" id="estado" class='form-control' disabled required>
+            </div>
+          </div>
+
+          <div class="row d-flex justify-content-center">
+            <button class="col-6 btn btn-primary btn-register p-3 m-3">Cadastro</button>
+          </div>
+
         </form>
+
       </div>
-    </div>
-    <div class="text-center border-top">
-      <p class="mt-4">Copyright, 2022, Grupo 6- Programadores Cariocas</p>
-    </div>
-  </footer>
+    </section>
+  </main>
   <script src="./js/Cadastro.js"></script>
 </body>
 
