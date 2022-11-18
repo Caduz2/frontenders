@@ -9,10 +9,10 @@ function startListAnimation(entries, observer) {
   entries.forEach(entry => {
     var listItems = document.querySelectorAll('.list-item');
     if (entry.isIntersecting) {
-      return listItems.forEach((item, index) => setTimeout(() => item.classList.add('show'), index * 600));
+      return listItems.forEach((item, index) => setTimeout(() => item.classList.add('showElement'), index * 600));
     }
 
-    return listItems.forEach((item, index) => setTimeout(() => item.classList.remove('show')));
+    return listItems.forEach((item, index) => setTimeout(() => item.classList.remove('showElement')));
   })
 }
 

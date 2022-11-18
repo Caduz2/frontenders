@@ -12,15 +12,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.card {
+.login.card {
+    width: 100%;
     background-color: rgba(97, 37, 37, 0.3);
     padding: 40px;
     border-radius: 2px;
-    width: 280px;
 }
 
 .card-header {

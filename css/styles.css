@@ -262,7 +262,7 @@ section {
   transition: visibility 1s, opacity 1s ease;
 }
 
-.show {
+.showElement {
   visibility: visible !important;
   opacity: 1 !important;
 }
@@ -419,7 +419,7 @@ section {
   background-color: var(--shadow) !important;
 }
 
-.message {
+.register.message {
   color: var(--white-text);
   font-size: 20px;
   font-weight: bold;
@@ -430,7 +430,7 @@ section {
     width: 70%;
   }
 
-  .message {
+  .register.message {
     background-color: var(--white-text);
     color: black;
   }
