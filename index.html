@@ -24,12 +24,43 @@
 </head>
 
 <body onload="showPage();">
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModallabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div id="login">
+          <form class="login card">
+            <div class="modal-header card-header d-flex justify-content-between">
+              <h2 class="d-inline-block">Login</h2>
+              <button type=" button" class="no-jump btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="card-content">
+              <div class="card-content-area">
+                <label for="usuario">Usuário</label>
+                <input type="text" id="usuario" autocomplete="off">
+              </div>
+              <div class="card-content-area">
+                <label for="password">Senha</label>
+                <input type="password" id="password" autocomplete="off">
+              </div>
+            </div>
+            <div class="card-footer">
+              <input type="submit" value="login" class="submit">
+              <a href="#" class="recuperar_senha">Esqueceu a senha?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="loader" class="preloader d-flex justify-content-center align-items-center">
     <div class="lds-ripple">
       <div></div>
       <div></div>
     </div>
   </div>
+
   <header>
     <nav class="navbar navbar-expand-lg sticky-top">
       <div class="container-fluid">
@@ -56,7 +87,7 @@
               <a href="./cadastro.html" class="nav-link">Registre-se</a>
             </li>
             <li class="nav-item p-2">
-              <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+              <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
           </ul>
         </div>
     </nav>
@@ -117,8 +148,8 @@
 
     <section id="detalhes"
       class="design container-fluid text-center flex-comlumn d-flex align-items-center justify-content-center p-5">
-      <div class="container row row-cols-1 row-cols-md-2 justify-content-between">
-        <div class="col">
+      <div class="container row row-cols-1 row-cols-md-2 justify-content-center">
+        <div class="col-12 col-md-6">
           <div class="card m-2 p-3">
             <div class="card-body">
               <img src="./images/testeAB.png" alt="testes AB" class="card-image-top  image-card mb-5">
@@ -129,7 +160,7 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col-12 col-md-6">
           <div class="card m-2 p-3">
             <div class="card-body">
               <img src="./images/seo.png" alt="testes AB" class="card-image-top  image-card mb-5">
@@ -140,7 +171,7 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col-12 col-md-6">
           <div class="card m-2 p-3">
             <div class="card-body">
               <img src="./images/code-icon.svg" alt="Otimização de codigo" class="card-image-top image-card mb-5">
@@ -283,37 +314,6 @@
       <p class="mt-4">Copyright, 2022, Grupo 6- Programadores Cariocas</p>
     </div>
   </footer>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModallabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div id="login">
-          <form class="login card">
-            <div class="card-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              <h2>Login</h2>
-            </div>
-            <div class="card-content">
-              <div class="card-content-area">
-                <label for="usuario">Usuário</label>
-                <input type="text" id="usuario" autocomplete="off">
-              </div>
-              <div class="card-content-area">
-                <label for="password">Senha</label>
-                <input type="password" id="password" autocomplete="off">
-              </div>
-            </div>
-            <div class="card-footer">
-              <input type="submit" value="login" class="submit">
-              <a href="#" class="recuperar_senha">Esqueceu a senha?</a>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
   </div>
   </div>
 

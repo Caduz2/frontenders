@@ -403,7 +403,7 @@ section {
 }
 
 .btn-register {
-  color: white;
+  color: var(--white-text);
   background-color: transparent;
   border: 1px solid white;
   box-shadow: 2px 5px 5px black;

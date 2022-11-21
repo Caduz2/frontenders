@@ -26,8 +26,11 @@ var options = {
 function init() {
   let observer = new IntersectionObserver(startListAnimation, options);
   let need = document.getElementById('need-section');
+  if (need) observer.observe(need);
 
-  observer.observe(need);
+  //remove the jump when opening the modal
+  var btnModal = document.getElementsByClassName('no-jump');
+  btnModal[0].addEventListener('click', (evt) => { evt.preventDefault(); console.log("Event") })
 }
 
 init();
