@@ -7,6 +7,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/Contato.css">
+  <link rel="stylesheet" href="../css/login.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&display=swap');
   </style>
@@ -14,7 +16,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"
     defer></script>
-  <script src='../js/index.js' defer></script>
+  <script src="../js/index.js" defer></script>
   <title>FrontEnders</title>
 </head>
 
@@ -25,6 +27,38 @@
       <div></div>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModallabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div id="login">
+          <form class="login card">
+            <div class="modal-header card-header d-flex justify-content-between">
+              <h2 class="d-inline-block">Login</h2>
+              <button type=" button" class="no-jump btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="card-content">
+              <div class="card-content-area">
+                <label for="usuario">Usuário</label>
+                <input type="text" id="usuario" autocomplete="off">
+              </div>
+              <div class="card-content-area">
+                <label for="password">Senha</label>
+                <input type="password" id="password" autocomplete="off">
+              </div>
+            </div>
+            <div class="card-footer">
+              <input type="submit" value="login" class="submit">
+              <a href="#" class="recuperar_senha">Esqueceu a senha?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <header>
     <nav class="navbar navbar-expand-lg sticky-top">
       <div class="container-fluid">
@@ -39,24 +73,76 @@
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item p-2">
-              <a href="#" class="nav-link">Detalhes</a>
+              <a href="./index.html#detalhes" class="nav-link">Detalhes</a>
             </li>
             <li class="nav-item p-2">
-              <a href="#" class="nav-link">Planos</a>
+              <a href="./index.html#planos" class="nav-link">Planos</a>
             </li>
             <li class="nav-item p-2">
-              <a href="#" class="nav-link">Cadastre-se</a>
+              <a href="./contato.html" class="nav-link">Contato</a>
             </li>
             <li class="nav-item p-2">
-              <a href="#" class="nav-link">Login</a>
+              <a href="./cadastro.html" class="nav-link">Registre-se</a>
+            </li>
+            <li class="nav-item p-2">
+              <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
             </li>
           </ul>
         </div>
     </nav>
     </div>
   </header>
+  <h1></h1>
+  </main>
+  <main>
+    <div id="cabecalho-interno">
+      <div class="container">
+        <h1>CONTATO</h1>
+        <h5>Use o seguinte formulário para entrar em contato com nosso atendimento</h5>
+      </div>
+    </div>
 
-  <main class="container w-100 h-100">
+
+    <article class="container">
+
+      <div class="linha">
+        <label>Nome Completo</label> <br>
+        <input type="text" name="nome" size="50" placeholder="Digite seu nome completo">
+      </div>
+
+      <div class="linha">
+        <div class="coluna">
+          <label>E-mail</label> <br>
+          <input type="email" name="email" placeholder="Digite seu e-mail">
+        </div>
+
+        <div class="coluna">
+          <label>Telefone</label> <br>
+          <input type="tel" name="number" placeholder="Digite seu telefone"></input>
+        </div>
+
+        <div style="clear:both"></div>
+
+        <div class="linha">
+          <label>Assunto</label> <br>
+          <input type="text" name="assunto" size="50" placeholder="Informe o assunto">
+        </div>
+
+        <div class="linha">
+          <label>Mensagem</label> <br>
+          <textarea name="mensagem" placeholder="Digite a mensagem" rows="5" cols="50"></textarea>
+        </div>
+
+        <div class="linha">
+          <input type="submit" value="Enviar mensagem" class="btn-enviar" id="btn-enviar" onclick="Mensagem()" />
+        </div>
+        <script>
+          function Mensagem() {
+            alert('Seus Dados Foram Enviados!! Em Breve Entraremos Em Contato.');
+          }</script>
+
+        </form>
+    </article>
   </main>
 
   <footer class="footer-page p-1 justify-content-center">

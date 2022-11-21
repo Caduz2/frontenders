@@ -15,7 +15,7 @@ function startListAnimation(entries, observer) {
     return listItems.forEach((item, index) => setTimeout(() => item.classList.remove('showElement')));
   })
 }
-
+  
 //observer options
 var options = {
   root: null,
