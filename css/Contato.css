@@ -7,7 +7,7 @@ label{
     font-size: 14px;
 }
 input{
-    width:calc(100% - 20px); /*calc determina o tamanho máximo*/
+    width:calc(100% - 20px); 
     padding:10px;
 }
 
@@ -20,7 +20,7 @@ textarea{
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.container{ /*Colocou-se margem em todos os dois containers, dando impressão de centralização*/
+.container{ 
     width:960px;
     margin: 0 auto;
 }
