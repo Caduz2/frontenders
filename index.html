@@ -28,7 +28,8 @@
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModallabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div id="login">
+
+        <div id="login" class="">
           <form class="login card">
             <div class="modal-header card-header d-flex justify-content-between">
               <h2 class="d-inline-block">Login</h2>
@@ -46,10 +47,30 @@
             </div>
             <div class="card-footer">
               <input type="submit" value="login" class="submit">
-              <a href="#" class="recuperar_senha">Esqueceu a senha?</a>
+              <a href="#" class="recuperar_senha" onclick="changeCards('recuperar');">Esqueceu a senha?</a>
             </div>
           </form>
         </div>
+
+        <div id="lost-card" class="lost-password hide-card">
+          <form class="lost-password  login card">
+            <div class="modal-header card-header d-flex justify-content-between">
+              <h2 class="d-inline-block">Recuperar senha</h2>
+              <button type=" button" class="no-jump btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="card-content">
+              <div class="card-content-area">
+                <label for="usuario">Email</label>
+                <input type="text" id="email" autocomplete="off">
+              </div>
+            </div>
+            <div class="card-footer">
+              <input type="submit" value="Recuperar" class="submit">
+              <a href="#" class="recuperar_senha" onclick="changeCards('login');">Lembrou?</a>
+            </div>
+          </form>
+        </div>
+
       </div>
     </div>
   </div>

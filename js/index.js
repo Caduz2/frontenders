@@ -4,6 +4,20 @@ function showPage() {
   }, 1000);
 }
 
+function changeCards(card) {
+  let login = document.getElementById('login');
+  let lostpassword = document.getElementById('lost-card');
+
+  if (card === 'recuperar') {
+    lostpassword.classList.toggle('hide-card');
+    return login.classList.toggle('hide-card');
+  }
+
+  login.classList.toggle('hide-card');
+  return lostpassword.classList.toggle('hide-card');
+
+}
+
 //Adicionando as animações na list de necessidades
 function startListAnimation(entries, observer) {
   entries.forEach(entry => {
@@ -15,7 +29,7 @@ function startListAnimation(entries, observer) {
     return listItems.forEach((item, index) => setTimeout(() => item.classList.remove('showElement')));
   })
 }
-  
+
 //observer options
 var options = {
   root: null,
@@ -30,7 +44,9 @@ function init() {
 
   //remove the jump when opening the modal
   var btnModal = document.getElementsByClassName('no-jump');
-  btnModal[0].addEventListener('click', (evt) => { evt.preventDefault(); console.log("Event") })
+
+  for (btn of btnModal)
+    btn.addEventListener('click', (evt) => { evt.preventDefault(); console.log("Event") });
 }
 
 init();

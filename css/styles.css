@@ -435,3 +435,22 @@ section {
     color: black;
   }
 }
+
+.hide-card {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(100px);
+  display: none;
+}
+
+#login {
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s;
+}
+
+#lost-card {
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s;
+}
