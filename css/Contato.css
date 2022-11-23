@@ -1,44 +1,47 @@
-article{
-    padding:30px 0;
+article {
+    padding: 30px 0;
 }
 
-label{
+label {
     font-weight: bold;
     font-size: 14px;
 }
-input{
-    width:calc(100% - 20px); 
-    padding:10px;
-}
 
-textarea{
-    width:calc(100% - 20px);
+input {
+    width: calc(100% - 20px);
     padding: 10px;
 }
-.sobrepocicao{
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+}
+
+.sobrepocicao {
     min-height: 600px;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.container{ 
-    width:960px;
+.container {
+    width: 960px;
     margin: 0 auto;
 }
-.btn-enviar{
-    background-color: #9002bb;
-    border:solid 1px #016b0f;
-    color:white;
+
+.btn-enviar {
+    background-color: var(--main-section-color);
+    border: solid 1px #016b0f;
+    color: var(--white-text);
     padding: 15px;
-    width:30%;
+    width: 30%;
 }
 
-.linha{
-    margin:10px 0 20px 0;
-    width:100%;
-    
+.linha {
+    margin: 10px 0 20px 0;
+    width: 100%;
+
 }
 
-.coluna{
+.coluna {
     width: 50%;
-    float:left;;
+    float: left;
 }

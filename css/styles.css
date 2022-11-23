@@ -442,7 +442,7 @@ section {
 
 .slide {
   position: relative !important;
-  transform: translateX(300px);
+  transform: translateX(500px);
   opacity: 0;
   transition: 1s all ease;
   height: 100%;
@@ -472,4 +472,4 @@ section {
 .form-lost-password {
   height: 100%;
 
-} 
+}
