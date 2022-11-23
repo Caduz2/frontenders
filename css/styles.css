@@ -436,21 +436,40 @@ section {
   }
 }
 
-.hide-card {
-  visibility: hidden;
+.modal-content {
+  overflow: hidden !important;
+}
+
+.slide {
+  position: relative !important;
+  transform: translateX(300px);
   opacity: 0;
-  transform: translate(100px);
-  display: none;
+  transition: 1s all ease;
+  height: 100%;
+  width: 100%;
+}
+
+.slide.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slides {
+  position: relative;
+  height: 400px;
 }
 
 #login {
-  visibility: visible;
-  opacity: 1;
-  transition: all 1s;
+  position: absolute !important;
+  top: 0;
 }
 
 #lost-card {
-  visibility: visible;
-  opacity: 1;
-  transition: all 1s;
+  position: absolute !important;
+  top: 0;
+}
+
+.form-lost-password {
+  height: 100%;
+
 }

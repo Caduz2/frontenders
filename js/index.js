@@ -9,12 +9,12 @@ function changeCards(card) {
   let lostpassword = document.getElementById('lost-card');
 
   if (card === 'recuperar') {
-    lostpassword.classList.toggle('hide-card');
-    return login.classList.toggle('hide-card');
+    lostpassword.classList.toggle('active');
+    return login.classList.toggle('active');
   }
 
-  login.classList.toggle('hide-card');
-  return lostpassword.classList.toggle('hide-card');
+  login.classList.toggle('active');
+  return lostpassword.classList.toggle('active');
 
 }
 
