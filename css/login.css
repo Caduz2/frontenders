@@ -11,7 +11,8 @@
     --light-green: #39E100;
 }
 
-#login {
+#login,
+#lost-card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,9 +21,12 @@
 
 .login.card {
     width: 100%;
+    min-height: fit-content;
     background-color: var(--white-text);
     padding: 40px;
     border-radius: 2px;
+    border: none;
+    transition: 1s height ease;
 }
 
 .card-header {

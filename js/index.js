@@ -43,10 +43,88 @@ function init() {
   if (need) observer.observe(need);
 
   //remove the jump when opening the modal
-  var btnModal = document.getElementsByClassName('no-jump');
+  //var btnModal = document.getElementsByClassName('no-jump');
 
-  for (btn of btnModal)
-    btn.addEventListener('click', (evt) => { evt.preventDefault(); console.log("Event") });
+  //for (btn of btnModal)
+  //btn.addEventListener('click', (evt) => { evt.preventDefault(); console.log("Event") });
 }
 
+
+
+//Validação de formulario para login e recuperação de senha
+
+function validatorEmail(email) {
+  let emailPattern =
+    /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+  return emailPattern.test(email);
+}
+
+function validatorPassword(password) {
+  let passwordPattern =
+    /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+  return passwordPattern.test(password);
+}
+
+function resetInputs(...inputs) {
+  inputs.forEach(input => input.value = '');
+}
+
+function loginSubmit(evt) {
+  evt.preventDefault();
+
+  const emailLogin = document.getElementById('emailLogin');
+  const senhaLogin = document.getElementById('password');
+  const message = document.getElementById('messageErrorLogin');
+
+  if (emailLogin === null || senhaLogin === null) return console.log('Campos não encontrados!');
+
+  //remove display none da mesagem
+  message.classList.toggle('d-none');
+
+  //adiciona a classe com a animação de entrada
+  setTimeout(() => message.classList.toggle('active'), 100);
+
+  if (validatorEmail(emailLogin.value) && validatorPassword(senhaLogin.value)) {
+    //exibe a caixa de mensagem
+    resetInputs(emailLogin, senhaLogin);
+    message.innerText = "Login realizado com sucesso!";
+
+    return setTimeout(() => {
+      message.classList.toggle('active');
+      window.location.reload();
+    }, 2000);
+  } else {
+    message.classList.toggle('alert-success');
+    message.classList.toggle('alert-danger');
+    message.innerText = 'Erro ao verificar as informações digitadas';
+
+    //timer to remove the message
+    return setTimeout(() => {
+      message.classList.toggle('alert-danger');
+      message.classList.toggle('alert-success');
+      message.classList.toggle('active');
+
+      setTimeout(() => message.classList.toggle('d-none'), 1000);
+    }, 3000)
+  }
+}
+
+
+function recuperacaoSubmit(evt) {
+  const emailRecuperacao = document.getElementById('emailRecuperacao');
+  const message = document.getElementById('messageErrorRecuperacao');
+
+  if (emailRecuperacao === null) return console.log('Campo não encontrado!');
+
+  message.classList.toggle('active');
+
+  if (validatorEmail(emailRecuperacao.value)) {
+    message.innerText = 'Email de recuperação enviado com sucesso!';
+  } else {
+    message.innerText = 'Email inválido, verifique as informações digitadas';
+  }
+}
+
+document.getElementById('loginForm').addEventListener('submit', loginSubmit);
+document.getElementById('recuperacaoForm').addEventListener('submit', recuperacaoSubmit);
 init();
