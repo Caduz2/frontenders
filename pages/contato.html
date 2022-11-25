@@ -27,20 +27,21 @@
       <div class="modal-content">
         <div class="slides">
           <div id="login" class="slide active">
-            <form class="login card">
+            <form id="loginForm" class="login card">
               <div class="modal-header card-header d-flex justify-content-between">
                 <h2 class="d-inline-block">Login</h2>
-                <button type=" button" class="no-jump btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <input type="button" class="no-jump btn-close" data-bs-dismiss="modal" aria-label="Close">
               </div>
               <div class="card-content">
                 <div class="card-content-area">
-                  <label for="usuario">Usuário</label>
-                  <input type="text" id="usuario" autocomplete="off">
+                  <label for="emailLogin">Email</label>
+                  <input type="email" id="emailLogin" autocomplete="off">
                 </div>
                 <div class="card-content-area">
                   <label for="password">Senha</label>
                   <input type="password" id="password" autocomplete="off">
                 </div>
+                <div class="alert alert-success slide d-none" id="messageErrorLogin"></div>
               </div>
               <div class="card-footer">
                 <input type="submit" value="login" class="submit">
@@ -49,17 +50,18 @@
             </form>
           </div>
 
-          <div id="lost-card" class="lost-password slide d-flex justify-content-center">
-            <form class="form-lost-password login card">
+          <div id="lost-card" class="lost-password slide d-flex justify-content-center d-none">
+            <form id='recuperacaoForm' class="form-lost-password login card">
               <div class="modal-header card-header d-flex justify-content-between">
                 <h2 class="d-inline-block">Recuperar senha</h2>
-                <button type=" button" class="no-jump btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="no-jump btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="card-content">
                 <div class="card-content-area">
-                  <label for="usuario">Email</label>
-                  <input type="text" id="email" autocomplete="off">
+                  <label for="emailRecuperacao">Email</label>
+                  <input type="text" id="emailRecuperacao" autocomplete="off">
                 </div>
+                <div class="alert alert-success slide d-none" id="messageErrorRecuperacao"></div>
               </div>
               <div class="card-footer">
                 <input type="submit" value="Recuperar" class="submit">
