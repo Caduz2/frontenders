@@ -9,13 +9,23 @@ function changeCards(card) {
   let lostpassword = document.getElementById('lost-card');
 
   if (card === 'recuperar') {
-    lostpassword.classList.toggle('active');
-    return login.classList.toggle('active');
+    login.classList.toggle('active');
+
+    return setTimeout(() => {
+      login.classList.toggle('d-none');
+      lostpassword.classList.toggle('d-none');
+      // we need to wait a little, so we can see the animation
+      setTimeout(() => lostpassword.classList.toggle('active'), 500);
+    }, 1000);
   }
 
-  login.classList.toggle('active');
-  return lostpassword.classList.toggle('active');
-
+  //showing login
+  lostpassword.classList.toggle('active');
+  setTimeout(() => {
+    lostpassword.classList.toggle('d-none');
+    login.classList.toggle('d-none');
+    setTimeout(() => login.classList.toggle('active'), 500);
+  }, 1000);
 }
 
 //Adicionando as animações na list de necessidades
@@ -75,6 +85,7 @@ function loginSubmit(evt) {
   const emailLogin = document.getElementById('emailLogin');
   const senhaLogin = document.getElementById('password');
   const message = document.getElementById('messageErrorLogin');
+  const msgClassList = message.classList;
 
   if (emailLogin === null || senhaLogin === null) return console.log('Campos não encontrados!');
 
@@ -82,7 +93,7 @@ function loginSubmit(evt) {
   message.classList.toggle('d-none');
 
   //adiciona a classe com a animação de entrada
-  setTimeout(() => message.classList.toggle('active'), 100);
+  setTimeout(() => msgClassList.toggle('active'), 100);
 
   if (validatorEmail(emailLogin.value) && validatorPassword(senhaLogin.value)) {
     //exibe a caixa de mensagem
@@ -90,21 +101,19 @@ function loginSubmit(evt) {
     message.innerText = "Login realizado com sucesso!";
 
     return setTimeout(() => {
-      message.classList.toggle('active');
+      msgClassList.toggle('active');
       window.location.reload();
     }, 2000);
   } else {
-    message.classList.toggle('alert-success');
-    message.classList.toggle('alert-danger');
+    msgClassList.replace('alert-success', 'alert-danger');
     message.innerText = 'Erro ao verificar as informações digitadas';
 
     //timer to remove the message
     return setTimeout(() => {
-      message.classList.toggle('alert-danger');
-      message.classList.toggle('alert-success');
-      message.classList.toggle('active');
+      msgClassList.replace('alert-danger', 'alert-success');
+      msgClassList.toggle('active');
 
-      setTimeout(() => message.classList.toggle('d-none'), 1000);
+      setTimeout(() => msgClassList.toggle('d-none'), 1000);
     }, 3000)
   }
 }
@@ -113,15 +122,23 @@ function loginSubmit(evt) {
 function recuperacaoSubmit(evt) {
   const emailRecuperacao = document.getElementById('emailRecuperacao');
   const message = document.getElementById('messageErrorRecuperacao');
+  const msgClassList = message.classList;
 
   if (emailRecuperacao === null) return console.log('Campo não encontrado!');
 
-  message.classList.toggle('active');
+  //show the element 
+  msgClassList.toggle('d-none');
+
+  //adiciona a classe com a animação de entrada
+  setTimeout(() => msgClassList.toggle('active'), 100);
 
   if (validatorEmail(emailRecuperacao.value)) {
     message.innerText = 'Email de recuperação enviado com sucesso!';
+    msgClassList.replace('alert-danger', 'alert-success');
+
   } else {
     message.innerText = 'Email inválido, verifique as informações digitadas';
+    msgClassList.replace('alert-success', 'alert-danger');
   }
 }
 

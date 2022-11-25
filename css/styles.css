@@ -438,6 +438,7 @@ section {
 
 .modal-content {
   overflow: hidden !important;
+  transition: max-height 1s ease;
 }
 
 .slide {
@@ -456,20 +457,17 @@ section {
 
 .slides {
   position: relative;
-  height: 500px;
+  transition: height 1s ease;
 }
 
 #login {
-  position: absolute !important;
   top: 0;
 }
 
 #lost-card {
-  position: absolute !important;
   top: 0;
 }
 
 .form-lost-password {
   height: 100%;
-
 }
