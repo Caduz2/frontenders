@@ -28,7 +28,7 @@ form.addEventListener("submit", (e) => {
 
   e.preventDefault();
 });
-  //Verifica o formato do email a cada tecla digitada 
+//Verifica o formato do email a cada tecla digitada 
 email.addEventListener("keyup", () => {
   if (validatorEmail(email.value) !== true) {
     textEmail.textContent = "Formato inválido.";
@@ -60,7 +60,7 @@ function validatorPassword(password) {
   return passwordPattern.test(password);
 }
 //funções para coletar e tratar o cep
-const limparFormulario = (endereco) =>{
+const limparFormulario = (endereco) => {
   document.getElementById('endereco').value = '';
   document.getElementById('bairro').value = '';
   document.getElementById('cidade').value = '';
@@ -68,7 +68,7 @@ const limparFormulario = (endereco) =>{
 }
 
 
-const preencherFormulario = (endereco) =>{
+const preencherFormulario = (endereco) => {
   document.getElementById('endereco').value = endereco.logradouro;
   document.getElementById('bairro').value = endereco.bairro;
   document.getElementById('cidade').value = endereco.localidade;
@@ -78,23 +78,23 @@ const preencherFormulario = (endereco) =>{
 
 const eNumero = (numero) => /^[0-9]+$/.test(numero);
 
-const cepValido = (cep) => cep.length == 8 && eNumero(cep); 
+const cepValido = (cep) => cep.length == 8 && eNumero(cep);
 
-const pesquisarCep = async() => {
+const pesquisarCep = async () => {
   limparFormulario();
   const cep = document.getElementById('cep').value;
   const url = `https://viacep.com.br/ws/${cep}/json/`;
-  if (cepValido(cep)){
-      const dados = await fetch(url);
-      const endereco = await dados.json();
-      if (endereco.hasOwnProperty('erro')){
-          document.getElementById('endereco').value = 'CEP não encontrado!';
-      }else {
-          preencherFormulario(endereco);
-      }
-  }else{
-      document.getElementById('endereco').value = 'CEP incorreto!';
+  if (cepValido(cep)) {
+    const dados = await fetch(url);
+    const endereco = await dados.json();
+    if (endereco.hasOwnProperty('erro')) {
+      document.getElementById('endereco').value = 'CEP não encontrado!';
+    } else {
+      preencherFormulario(endereco);
+    }
+  } else {
+    document.getElementById('endereco').value = 'CEP incorreto!';
   }
 }
 
-cep.addEventListener('focusout',pesquisarCep);
+cep.addEventListener('focusout', pesquisarCep);
